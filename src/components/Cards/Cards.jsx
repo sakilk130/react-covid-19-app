@@ -3,10 +3,13 @@ import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import styles from './Cards.module.css';
 import CountUp from 'react-countup';
 import cn from 'classnames';
+import ReactLoading from 'react-loading';
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return 'Loading....';
+    return (
+      <ReactLoading type="spin" color="#61DBFB" height={'20%'} width={'20%'} />
+    );
   }
   return (
     <div className={styles.container}>
