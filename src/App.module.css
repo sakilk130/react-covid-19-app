@@ -13,7 +13,10 @@ body {
   width: 370px;
   margin-top: 50px;
 }
-
+.footer {
+  align-items: center;
+  text-align: center;
+}
 @media (max-width: 770px) {
   .container {
     margin: 0 10%;

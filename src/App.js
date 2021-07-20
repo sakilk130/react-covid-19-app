@@ -4,6 +4,8 @@ import { Cards, Chart, CountryPicker } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api/index';
 import image from './images/image.png';
+
+import Social from './components/Social/Social';
 class App extends React.Component {
   state = {
     data: {},
@@ -28,6 +30,10 @@ class App extends React.Component {
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
+        <h4>Created By Sakil Khan</h4>
+        <footer className={styles.footer}>
+          <Social />
+        </footer>
       </div>
     );
   }
